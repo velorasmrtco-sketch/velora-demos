@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shine Pro Auto Detailing — Bowie, MD</title>
+<meta name="description" content="Professional auto detailing in Bowie, MD. Interior, exterior, and full detail packages. Book online today.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#050811;--s1:#0d1120;--s2:#131929;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.12);--tx:#f0f4ff;--mu2:rgba(240,244,255,.65);--ac:#60a0f0;--acd:rgba(96,160,240,.1);--acb:rgba(96,160,240,.25);--red:#f06060}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--b1);position:sticky;top:0;background:rgba(5,8,17,.9);backdrop-filter:blur(12px);z-index:100}
+.logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800}.logo span{color:var(--ac)}
+.nav-cta{background:var(--ac);color:#050811;font-weight:700;font-size:12px;padding:9px 18px;border-radius:8px;text-decoration:none;font-family:'Syne',sans-serif}
+.call-bar{background:var(--red);color:#fff;text-align:center;font-size:12px;font-weight:700;padding:8px;letter-spacing:.04em}
+.call-bar a{color:#fff;text-decoration:none}
+.hero{padding:70px 5% 60px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+h1{font-family:'Syne',sans-serif;font-size:clamp(30px,4.5vw,46px);font-weight:800;line-height:1.15;margin-bottom:14px}
+h1 span{color:var(--ac)}
+.hero-sub{font-size:15px;color:var(--mu2);margin-bottom:24px;max-width:460px}
+.stars{color:#f0c040;font-size:13px;margin-bottom:8px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:9px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;text-decoration:none;cursor:pointer;border:none;transition:.2s}
+.btn-p{background:var(--ac);color:#050811}.btn-p:hover{opacity:.9}
+.btn-s{background:transparent;color:var(--tx);border:1px solid var(--b2)}.btn-s:hover{border-color:var(--ac);color:var(--ac)}
+.price-card{background:var(--s1);border:1px solid var(--b2);border-radius:16px;padding:24px}
+.price-card h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.popular{background:var(--acd);color:var(--ac);font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;border:1px solid var(--acb)}
+.pkg{padding:12px 0;border-bottom:1px solid var(--b1)}
+.pkg:last-child{border-bottom:none;padding-bottom:0}
+.pkg-name{font-weight:700;font-size:13px}
+.pkg-price{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--ac)}
+.pkg-price span{font-size:12px;font-weight:500;color:var(--mu2);font-family:'Outfit',sans-serif}
+.pkg-items{font-size:11px;color:var(--mu2);margin-top:3px}
+.section{padding:60px 5%;max-width:1100px;margin:0 auto}
+h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:30px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px}
+.svc-icon{font-size:26px;margin-bottom:10px}
+.svc h3{font-size:14px;font-weight:700;margin-bottom:6px}
+.svc p{font-size:12px;color:var(--mu2)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
+.gal-item{aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--s1);border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--mu2)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:20px}
+.rev-stars{color:#f0c040;font-size:12px;margin-bottom:8px}
+.rev-text{font-size:13px;color:var(--mu2);margin-bottom:12px;line-height:1.7}
+.rev-author{font-weight:700;font-size:13px}
+.book-section{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:36px;max-width:600px;margin:0 auto}
+.book-section h2{font-size:22px;text-align:center;margin-bottom:6px}
+.book-sub{font-size:13px;color:var(--mu2);text-align:center;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-group{margin-bottom:12px}
+label{font-size:12px;font-weight:600;color:var(--mu2);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:11px 14px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ac)}
+textarea{resize:vertical;min-height:80px}
+.submit-btn{width:100%;background:var(--ac);color:#050811;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:14px;border-radius:10px;border:none;cursor:pointer;margin-top:8px}
+.velora-credit{text-align:center;padding:30px;font-size:11px;color:var(--mu2);border-top:1px solid var(--b1)}.velora-credit span{color:var(--ac);font-weight:700}
+/* CHATBOT */
+.vbot{position:fixed;bottom:24px;right:24px;z-index:1000}
+.vbot-btn{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#4080c0);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 16px rgba(96,160,240,.35);position:relative}
+.vbot-notify{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#f06060;border-radius:50%;border:2px solid var(--bg)}
+.vbot-box{display:none;position:absolute;bottom:64px;right:0;width:300px;background:var(--s1);border:1px solid var(--b2);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+.vbot-box.open{display:flex;flex-direction:column}
+.vbot-head{background:linear-gradient(90deg,#1a2540,#0d1828);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.vbot-av{width:32px;height:32px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:14px}
+.vbot-name{font-weight:700;font-size:13px;flex:1}
+.vbot-status{font-size:10px;color:var(--ac)}
+.vbot-close{background:none;border:none;color:var(--mu2);cursor:pointer;font-size:16px;padding:4px}
+.vbot-msgs{padding:14px;height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.vmsg{max-width:88%;padding:9px 12px;border-radius:10px;font-size:12px;line-height:1.6}
+.vmsg.bot{background:var(--s2);color:var(--tx);align-self:flex-start;border-radius:10px 10px 10px 2px}
+.vmsg.user{background:var(--acd);color:var(--tx);align-self:flex-end;border-radius:10px 10px 2px 10px;border:1px solid var(--acb)}
+.vmsg.typing{color:var(--mu2);font-style:italic}
+.vbot-quick{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 10px}
+.vq{background:var(--s2);border:1px solid var(--b2);color:var(--mu2);font-size:10px;padding:4px 9px;border-radius:5px;cursor:pointer;font-family:'Outfit',sans-serif}
+.vq:hover{border-color:var(--ac);color:var(--ac)}
+.vbot-input{display:flex;padding:10px 14px;gap:8px;border-top:1px solid var(--b1)}
+.vbot-input input{flex:1;padding:8px 12px;font-size:12px;border-radius:7px}
+.vbot-send{background:var(--ac);border:none;border-radius:7px;padding:8px 12px;cursor:pointer;font-size:13px;color:#050811}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.reviews{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="call-bar">Emergency Detail? Call now: <a href="tel:3015550200">(301) 555-0200</a></div>
+<nav>
+  <div class="logo">Shine<span>Pro</span></div>
+  <a class="nav-cta" href="#book">Book Online</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="stars">★★★★★ <span style="color:var(--mu2);font-size:12px">5.0 · 87 Google Reviews</span></div>
+    <h1>Bowie's #1 <span>Auto Detailing</span> Service</h1>
+    <p class="hero-sub">Professional interior & exterior detailing that makes your car look brand new. Mobile service available — we come to you.</p>
+    <div class="hero-btns">
+      <a class="btn btn-p" href="#book">Book Online</a>
+      <a class="btn btn-s" href="tel:3015550200">Call (301) 555-0200</a>
+    </div>
+  </div>
+  <div class="price-card">
+    <h3>Our Packages <span class="popular">MOST POPULAR ↓</span></h3>
+    <div class="pkg">
+      <div class="pkg-name">Exterior Wash & Wax</div>
+      <div class="pkg-price">$99 <span>/ starting at</span></div>
+      <div class="pkg-items">Hand wash, clay bar, wax, tire shine</div>
+    </div>
+    <div class="pkg" style="background:var(--acd);border-radius:8px;padding:12px;margin:8px 0">
+      <div class="pkg-name">Full Detail <span style="color:var(--ac);font-size:10px;font-weight:700;margin-left:6px">★ POPULAR</span></div>
+      <div class="pkg-price">$199 <span>/ starting at</span></div>
+      <div class="pkg-items">Exterior + full interior, shampoo, leather treat, odor removal</div>
+    </div>
+    <div class="pkg">
+      <div class="pkg-name">Premium Detail</div>
+      <div class="pkg-price">$299 <span>/ starting at</span></div>
+      <div class="pkg-items">Everything + paint correction, ceramic coat prep, engine bay</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>What We Do</h2>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">🚗</div><h3>Exterior Detail</h3><p>Hand wash, decontamination, clay bar, wax/sealant, window clean, tire & wheel detail.</p></div>
+    <div class="svc"><div class="svc-icon">🪑</div><h3>Interior Detail</h3><p>Full vacuum, shampoo carpets & seats, leather conditioning, dashboard & trim, glass clean.</p></div>
+    <div class="svc"><div class="svc-icon">✨</div><h3>Paint Correction</h3><p>Remove swirl marks, scratches & oxidation. Single, two, or three-stage correction available.</p></div>
+    <div class="svc"><div class="svc-icon">🛡️</div><h3>Ceramic Coating</h3><p>Professional-grade ceramic protection that lasts 2–5 years. Hydrophobic, UV resistant.</p></div>
+    <div class="svc"><div class="svc-icon">🚌</div><h3>Mobile Service</h3><p>We come to your home or office. No need to drop off your car — we detail it where it sits.</p></div>
+    <div class="svc"><div class="svc-icon">🌟</div><h3>Headlight Restore</h3><p>Restore cloudy, yellowed headlights to near-new clarity. Improves appearance and safety.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Work</h2>
+  <div class="gallery">
+    <div class="gal-item">🚗</div><div class="gal-item">✨</div><div class="gal-item">🪑</div><div class="gal-item">💧</div>
+    <div class="gal-item">🛞</div><div class="gal-item">🔍</div><div class="gal-item">🌟</div><div class="gal-item">🚘</div>
+  </div>
+  <div class="reviews">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"My car looks better than when I bought it. They got stains out of my seats I thought were permanent. Will never go anywhere else."</p><div class="rev-author">Marcus T. — Bowie</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"The mobile service is a game changer. They came to my office and detailed my truck while I worked. Couldn't be easier."</p><div class="rev-author">Sandra K. — Upper Marlboro</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Paid for the full detail before selling my car and it helped me get $1,500 more than expected. Best investment I've made."</p><div class="rev-author">James R. — Mitchellville</div></div>
+  </div>
+</div>
+
+<div class="section" id="book">
+  <div class="book-section">
+    <h2>Book Your Detail</h2>
+    <p class="book-sub">Fill out the form and we'll confirm your appointment within 2 hours.</p>
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Marcus"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Thompson"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(301) 555-0000"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+    </div>
+    <div class="form-group"><label>Service</label>
+      <select><option>Exterior Wash & Wax ($99+)</option><option>Full Detail ($199+)</option><option>Premium Detail ($299+)</option><option>Paint Correction</option><option>Ceramic Coating</option><option>Mobile Service</option></select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Vehicle Type</label><select><option>Sedan</option><option>SUV / Crossover</option><option>Truck</option><option>Van / Minivan</option><option>Luxury / Exotic</option></select></div>
+      <div class="form-group"><label>Preferred Date</label><input type="date"></div>
+    </div>
+    <div class="form-group"><label>Notes (optional)</label><textarea placeholder="Any specific concerns, stains, or requests..."></textarea></div>
+    <button class="submit-btn">Request Appointment →</button>
+  </div>
+</div>
+
+<div class="velora-credit">Built by <span>Velora</span> — AI-powered websites for local businesses · <a href="#" style="color:var(--ac)">velora.associates</a></div>
+
+<!-- CHATBOT -->
+<div class="vbot" id="vbot">
+  <div class="vbot-box" id="vbotBox">
+    <div class="vbot-head">
+      <div class="vbot-av">🚗</div>
+      <div><div class="vbot-name">Shine Pro Assistant</div><div class="vbot-status">● Online — usually replies instantly</div></div>
+      <button class="vbot-close" onclick="toggleBot()">✕</button>
+    </div>
+    <div class="vbot-msgs" id="vbotMsgs">
+      <div class="vmsg bot">Hey! 👋 I'm the Shine Pro assistant. Ask me about pricing, services, or booking.</div>
+    </div>
+    <div class="vbot-quick">
+      <button class="vq" onclick="quickSend('What packages do you offer?')">Packages</button>
+      <button class="vq" onclick="quickSend('How much does a full detail cost?')">Pricing</button>
+      <button class="vq" onclick="quickSend('Do you offer mobile service?')">Mobile?</button>
+      <button class="vq" onclick="quickSend('How do I book?')">Book</button>
+    </div>
+    <div class="vbot-input">
+      <input type="text" id="vbotInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')vbotSend()">
+      <button class="vbot-send" onclick="vbotSend()">→</button>
+    </div>
+  </div>
+  <button class="vbot-btn" onclick="toggleBot()" id="vbotBtnEl">🚗<span class="vbot-notify" id="vbotDot"></span></button>
+</div>
+<script>
+const R={
+  price:["Our packages start at $99 for an exterior wash & wax, $199 for a full detail, and $299 for a premium detail. Final price depends on vehicle size. We can give you an exact quote when you book!","Exterior starts at $99, Full Detail at $199, Premium at $299. SUVs and trucks are a bit more than sedans. Use the booking form above and we'll send you an exact quote."],
+  book:["You can book right on this page! Just scroll up and fill out the booking form — we'll confirm within 2 hours. Or call us at (301) 555-0200.","Use the booking form at the top of this page. We'll confirm your appointment within 2 hours and send a reminder the day before."],
+  mobile:["Yes! We offer mobile detailing — we come to your home, office, or anywhere in the Bowie/Upper Marlboro area. Same great results, zero hassle for you.","Absolutely. Our mobile service covers Bowie, Upper Marlboro, Mitchellville, and surrounding areas. We bring all equipment — you just need to be there."],
+  interior:["Our interior detail includes full vacuum, carpet & seat shampoo, leather conditioning, dashboard wipe-down, and glass cleaning. It's included in the Full Detail ($199+) package.","Full interior detail: vacuum everything, shampoo carpets and seats, leather treatment, clean all trim and glass. Starts at $199 as part of our Full Detail package."],
+  ceramic:["Ceramic coating is a professional-grade protective layer that lasts 2–5 years. It makes your car water-repellent, UV resistant, and much easier to keep clean. We offer coating packages after a full detail.","Yes! Ceramic coating is one of our most popular upgrades. We prep the paint first, then apply a professional-grade ceramic for protection that lasts years. Ask about pricing when you book."],
+  hours:["We're available Monday–Saturday, 7am–6pm. Mobile appointments available 7 days a week with advance notice. Call us at (301) 555-0200 to schedule."],
+  time:["A full exterior wash takes about 1–2 hours. A full detail is 3–5 hours depending on vehicle size. Premium details or paint correction can take a full day."]
+};
+function getReply(m){const l=m.toLowerCase();if(/price|cost|how much|charge/.test(l))return rnd(R.price);if(/book|appointment|schedule/.test(l))return rnd(R.book);if(/mobile|come to|location|travel/.test(l))return rnd(R.mobile);if(/interior|inside|seat|carpet|vacuum/.test(l))return rnd(R.interior);if(/ceramic|coat|protect/.test(l))return rnd(R.ceramic);if(/hour|open|available|time/.test(l))return rnd(R.hours);if(/long|how long|take/.test(l))return rnd(R.time);if(/package|service|offer/.test(l))return"We offer Exterior Wash & Wax ($99+), Full Detail ($199+), Premium Detail ($299+), Paint Correction, Ceramic Coating, Headlight Restoration, and Mobile Service. What are you interested in?";return"Great question! For the most accurate answer, give us a call at (301) 555-0200 or use the booking form to reach us directly.";}
+function rnd(a){return a[Math.floor(a.length*Math.random())%a.length]}
+function toggleBot(){const b=document.getElementById('vbotBox');const d=document.getElementById('vbotDot');b.classList.toggle('open');if(b.classList.contains('open'))d.style.display='none';}
+function quickSend(t){document.getElementById('vbotInput').value=t;vbotSend();}
+function vbotSend(){const i=document.getElementById('vbotInput');const m=i.value.trim();if(!m)return;const c=document.getElementById('vbotMsgs');c.innerHTML+=`<div class="vmsg user">${m}</div>`;i.value='';c.innerHTML+=`<div class="vmsg bot typing">Typing…</div>`;c.scrollTop=c.scrollHeight;setTimeout(()=>{const t=c.querySelector('.typing');if(t)t.remove();c.innerHTML+=`<div class="vmsg bot">${getReply(m)}</div>`;c.scrollTop=c.scrollHeight;},900);}
+</script>
+</body>
+</html>

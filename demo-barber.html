@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fade Room — Barber Shop, Hyattsville MD</title>
+<meta name="description" content="Premium barber shop in Hyattsville, MD. Fades, cuts, lineups & beard trims. Walk-ins welcome. Book online.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#08060a;--s1:#100e14;--s2:#18151e;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.12);--tx:#f5f0ff;--mu2:rgba(245,240,255,.65);--ac:#c060f0;--acd:rgba(192,96,240,.1);--acb:rgba(192,96,240,.25);--gold:#f0c040}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--b1);position:sticky;top:0;background:rgba(8,6,10,.92);backdrop-filter:blur(12px);z-index:100}
+.logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;letter-spacing:-.02em}.logo span{color:var(--ac)}
+.nav-cta{background:var(--ac);color:#fff;font-weight:700;font-size:12px;padding:9px 18px;border-radius:8px;text-decoration:none;font-family:'Syne',sans-serif}
+.hero{padding:70px 5% 60px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-.02em}
+h1 span{color:var(--ac)}
+.hero-sub{font-size:15px;color:var(--mu2);margin-bottom:24px}
+.hours-pill{display:inline-flex;align-items:center;gap:8px;background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:7px 16px;font-size:12px;margin-bottom:24px}
+.open-dot{width:8px;height:8px;border-radius:50%;background:#40d080;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:9px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;text-decoration:none;cursor:pointer;border:none;transition:.2s}
+.btn-p{background:var(--ac);color:#fff}.btn-p:hover{opacity:.88}
+.btn-s{background:transparent;color:var(--tx);border:1px solid var(--b2)}.btn-s:hover{border-color:var(--ac);color:var(--ac)}
+.price-card{background:var(--s1);border:1px solid var(--b2);border-radius:16px;overflow:hidden}
+.price-header{padding:18px 20px;background:linear-gradient(135deg,#1a0e26,#110a1a);border-bottom:1px solid var(--b1)}
+.price-header h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:800}
+.price-header p{font-size:11px;color:var(--mu2);margin-top:3px}
+.price-list{padding:16px 20px}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--b1)}
+.price-row:last-child{border-bottom:none}
+.price-name{font-size:13px;font-weight:600}
+.price-tag{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:var(--ac)}
+.popular-tag{font-size:9px;font-weight:700;background:var(--acd);color:var(--ac);border:1px solid var(--acb);padding:2px 7px;border-radius:4px;margin-left:7px;vertical-align:middle}
+.barber-note{padding:12px 20px;background:var(--acd);font-size:11px;color:var(--ac);border-top:1px solid var(--acb)}
+.section{padding:60px 5%;max-width:1100px;margin:0 auto}
+h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:30px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px}
+.svc-icon{font-size:26px;margin-bottom:10px}
+.svc h3{font-size:14px;font-weight:700;margin-bottom:4px}
+.svc-price{font-size:14px;font-weight:800;color:var(--ac);margin-bottom:6px;font-family:'Syne',sans-serif}
+.svc p{font-size:12px;color:var(--mu2)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
+.gal-item{aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--s1);border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:36px}
+.barbers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px}
+.barber-card{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px;text-align:center}
+.barber-ava{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--acd),var(--s2));margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid var(--acb)}
+.barber-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.barber-spec{font-size:11px;color:var(--ac);margin-bottom:6px}
+.barber-rating{font-size:11px;color:var(--mu2)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:20px}
+.rev-stars{color:var(--gold);font-size:12px;margin-bottom:8px}
+.rev-text{font-size:13px;color:var(--mu2);margin-bottom:12px;line-height:1.7}
+.rev-author{font-weight:700;font-size:13px}
+.book-section{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:36px;max-width:600px;margin:0 auto}
+.book-section h2{text-align:center;font-size:22px;margin-bottom:6px}
+.book-sub{font-size:13px;color:var(--mu2);text-align:center;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-group{margin-bottom:12px}
+label{font-size:12px;font-weight:600;color:var(--mu2);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:11px 14px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ac)}
+.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.time-btn{background:var(--s2);border:1px solid var(--b1);border-radius:7px;padding:8px 4px;font-size:12px;color:var(--mu2);cursor:pointer;text-align:center;transition:.15s}
+.time-btn:hover,.time-btn.sel{border-color:var(--ac);color:var(--ac);background:var(--acd)}
+.submit-btn{width:100%;background:var(--ac);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:14px;border-radius:10px;border:none;cursor:pointer;margin-top:8px}
+.velora-credit{text-align:center;padding:30px;font-size:11px;color:var(--mu2);border-top:1px solid var(--b1)}.velora-credit span{color:var(--ac);font-weight:700}
+/* CHATBOT */
+.vbot{position:fixed;bottom:24px;right:24px;z-index:1000}
+.vbot-btn{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#9030c0);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 16px rgba(192,96,240,.35);position:relative}
+.vbot-notify{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#f06060;border-radius:50%;border:2px solid var(--bg)}
+.vbot-box{display:none;position:absolute;bottom:64px;right:0;width:300px;background:var(--s1);border:1px solid var(--b2);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+.vbot-box.open{display:flex;flex-direction:column}
+.vbot-head{background:linear-gradient(90deg,#1a0e26,#0e0814);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.vbot-av{width:32px;height:32px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:14px}
+.vbot-name{font-weight:700;font-size:13px;flex:1}
+.vbot-status{font-size:10px;color:var(--ac)}
+.vbot-close{background:none;border:none;color:var(--mu2);cursor:pointer;font-size:16px;padding:4px}
+.vbot-msgs{padding:14px;height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.vmsg{max-width:88%;padding:9px 12px;border-radius:10px;font-size:12px;line-height:1.6}
+.vmsg.bot{background:var(--s2);color:var(--tx);align-self:flex-start}
+.vmsg.user{background:var(--acd);color:var(--tx);align-self:flex-end;border:1px solid var(--acb)}
+.vmsg.typing{color:var(--mu2);font-style:italic}
+.vbot-quick{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 10px}
+.vq{background:var(--s2);border:1px solid var(--b2);color:var(--mu2);font-size:10px;padding:4px 9px;border-radius:5px;cursor:pointer;font-family:'Outfit',sans-serif}
+.vq:hover{border-color:var(--ac);color:var(--ac)}
+.vbot-input{display:flex;padding:10px 14px;gap:8px;border-top:1px solid var(--b1)}
+.vbot-input input{flex:1;padding:8px 12px;font-size:12px;border-radius:7px}
+.vbot-send{background:var(--ac);border:none;border-radius:7px;padding:8px 12px;cursor:pointer;font-size:13px;color:#fff}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.barbers{grid-template-columns:1fr 1fr}.reviews{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.time-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">The Fade<span>Room</span></div>
+  <a class="nav-cta" href="#book">Book a Cut</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <div class="tag">★ Hyattsville's Finest Cuts Since 2018</div>
+    <h1>Fresh Cut. <span>Clean Fade.</span> Every Time.</h1>
+    <p class="hero-sub">Premium barber services in Hyattsville, MD. Walk-ins welcome. Appointments get priority — book online in 30 seconds.</p>
+    <div class="hours-pill"><span class="open-dot"></span><strong>Open Now</strong> · Mon–Sat 9am–8pm · Sun 10am–5pm</div>
+    <div class="hero-btns">
+      <a class="btn btn-p" href="#book">Book a Cut</a>
+      <a class="btn btn-s" href="tel:3015550300">Call (301) 555-0300</a>
+    </div>
+  </div>
+  <div class="price-card">
+    <div class="price-header"><h3>Price List</h3><p>Walk-ins welcome · No hidden fees</p></div>
+    <div class="price-list">
+      <div class="price-row"><span class="price-name">Haircut <span class="popular-tag">POPULAR</span></span><span class="price-tag">$30</span></div>
+      <div class="price-row"><span class="price-name">Skin Fade</span><span class="price-tag">$35</span></div>
+      <div class="price-row"><span class="price-name">Haircut + Beard Trim</span><span class="price-tag">$45</span></div>
+      <div class="price-row"><span class="price-name">Lineup / Edge Up</span><span class="price-tag">$20</span></div>
+      <div class="price-row"><span class="price-name">Beard Trim Only</span><span class="price-tag">$20</span></div>
+      <div class="price-row"><span class="price-name">Hot Towel Shave</span><span class="price-tag">$35</span></div>
+      <div class="price-row"><span class="price-name">Kids Cut (12 & under)</span><span class="price-tag">$25</span></div>
+    </div>
+    <div class="barber-note">💈 Tip your barber in cash — they appreciate it!</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Cuts</h2>
+  <div class="gallery">
+    <div class="gal-item">✂️</div><div class="gal-item">💈</div><div class="gal-item">🧔</div><div class="gal-item">👑</div>
+  </div>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">✂️</div><h3>Fade Cuts</h3><div class="svc-price">from $30</div><p>High, mid, low, and skin fades. Taper fades, burst fades, temple fades — we do them all clean.</p></div>
+    <div class="svc"><div class="svc-icon">🧔</div><h3>Beard Trims</h3><div class="svc-price">from $20</div><p>Shape-up, line-up, full trim. We'll get your beard looking sharp and well-defined.</p></div>
+    <div class="svc"><div class="svc-icon">💈</div><h3>Hot Towel Shave</h3><div class="svc-price">$35</div><p>Classic straight-razor shave with hot towel prep. The closest, smoothest shave you'll ever get.</p></div>
+    <div class="svc"><div class="svc-icon">👶</div><h3>Kids Cuts</h3><div class="svc-price">$25</div><p>We're great with kids. Patient, gentle, and skilled — your little one will leave looking fresh.</p></div>
+    <div class="svc"><div class="svc-icon">📐</div><h3>Lineups</h3><div class="svc-price">$20</div><p>Clean, sharp edge-up on hairline, temples, and neckline. Quick service, big difference.</p></div>
+    <div class="svc"><div class="svc-icon">🎨</div><h3>Hair Designs</h3><div class="svc-price">+$15</div><p>Custom hair art, parts, and designs. Talk to your barber about what you want.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Meet Your Barbers</h2>
+  <div class="barbers">
+    <div class="barber-card"><div class="barber-ava">✂️</div><div class="barber-name">Marcus</div><div class="barber-spec">Skin Fades & Designs</div><div class="barber-rating">⭐ 4.9 · 320+ cuts</div></div>
+    <div class="barber-card"><div class="barber-ava">💈</div><div class="barber-name">DeShawn</div><div class="barber-spec">Tapers & Beard Work</div><div class="barber-rating">⭐ 4.9 · 280+ cuts</div></div>
+    <div class="barber-card"><div class="barber-ava">👑</div><div class="barber-name">Javier</div><div class="barber-spec">Classic Cuts & Hot Shaves</div><div class="barber-rating">⭐ 5.0 · 410+ cuts</div></div>
+  </div>
+  <div class="reviews">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Marcus gave me the cleanest fade I've ever had. I've been coming here every 2 weeks since. This is my shop for life."</p><div class="rev-author">Antonio B. — Hyattsville</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Booked online for the first time, showed up and they had me in the chair within 5 minutes. Best haircut experience I've had."</p><div class="rev-author">Chris M. — Landover</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Brought my 7-year-old son and he loved it. DeShawn was super patient and now my son actually gets excited about haircut day."</p><div class="rev-author">Tanya R. — Cheverly</div></div>
+  </div>
+</div>
+
+<div class="section" id="book">
+  <div class="book-section">
+    <h2>Book Your Cut</h2>
+    <p class="book-sub">Reserve your spot. No wait, no walk-up anxiety.</p>
+    <div class="form-row">
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Marcus"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(301) 555-0000"></div>
+    </div>
+    <div class="form-group"><label>Service</label>
+      <select><option>Haircut ($30)</option><option>Skin Fade ($35)</option><option>Haircut + Beard ($45)</option><option>Lineup / Edge Up ($20)</option><option>Beard Trim ($20)</option><option>Hot Towel Shave ($35)</option><option>Kids Cut ($25)</option></select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Preferred Barber</label><select><option>No preference</option><option>Marcus</option><option>DeShawn</option><option>Javier</option></select></div>
+      <div class="form-group"><label>Date</label><input type="date"></div>
+    </div>
+    <div class="form-group"><label>Available Times</label>
+      <div class="time-grid">
+        <div class="time-btn sel" onclick="selTime(this)">9:00 AM</div>
+        <div class="time-btn" onclick="selTime(this)">10:00 AM</div>
+        <div class="time-btn" onclick="selTime(this)">11:00 AM</div>
+        <div class="time-btn" onclick="selTime(this)">12:00 PM</div>
+        <div class="time-btn" onclick="selTime(this)">1:00 PM</div>
+        <div class="time-btn" onclick="selTime(this)">2:00 PM</div>
+        <div class="time-btn" onclick="selTime(this)">3:00 PM</div>
+        <div class="time-btn" onclick="selTime(this)">4:00 PM</div>
+      </div>
+    </div>
+    <button class="submit-btn">Confirm Booking →</button>
+  </div>
+</div>
+
+<div class="velora-credit">Built by <span>Velora</span> — AI-powered websites for local businesses · <a href="#" style="color:var(--ac)">velora.associates</a></div>
+
+<!-- CHATBOT -->
+<div class="vbot" id="vbot">
+  <div class="vbot-box" id="vbotBox">
+    <div class="vbot-head">
+      <div class="vbot-av">💈</div>
+      <div><div class="vbot-name">Fade Room Assistant</div><div class="vbot-status">● Online now</div></div>
+      <button class="vbot-close" onclick="toggleBot()">✕</button>
+    </div>
+    <div class="vbot-msgs" id="vbotMsgs">
+      <div class="vmsg bot">What's good! 💈 Ask me about cuts, pricing, or booking and I'll get you sorted.</div>
+    </div>
+    <div class="vbot-quick">
+      <button class="vq" onclick="quickSend('What does a haircut cost?')">Price</button>
+      <button class="vq" onclick="quickSend('How do I book an appointment?')">Book</button>
+      <button class="vq" onclick="quickSend('What are your hours?')">Hours</button>
+      <button class="vq" onclick="quickSend('Do you do walk-ins?')">Walk-ins</button>
+    </div>
+    <div class="vbot-input">
+      <input type="text" id="vbotInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')vbotSend()">
+      <button class="vbot-send" onclick="vbotSend()">→</button>
+    </div>
+  </div>
+  <button class="vbot-btn" onclick="toggleBot()" id="vbotBtnEl">💈<span class="vbot-notify" id="vbotDot"></span></button>
+</div>
+<script>
+function selTime(el){document.querySelectorAll('.time-btn').forEach(b=>b.classList.remove('sel'));el.classList.add('sel');}
+const R={
+  price:["Haircut is $30, skin fade is $35, haircut + beard is $45, lineup is $20, beard only is $20, hot towel shave is $35, and kids cuts are $25. No hidden fees — what you see is what you pay.","Our price list: Haircut $30 · Skin Fade $35 · Haircut + Beard $45 · Lineup $20 · Beard $20 · Hot Towel Shave $35 · Kids $25. Tips to your barber are always appreciated!"],
+  book:["Book right here on this page! Scroll down and pick your service, barber, date, and time. We'll confirm your spot. Booked appointments skip the wait.","Use the booking form at the bottom of this page. Pick your service, preferred barber, date, and time slot. You'll get a text confirmation."],
+  hours:["We're open Monday–Saturday 9am–8pm and Sunday 10am–5pm. Walk-ins are welcome anytime we're open — booked appointments get priority.","Hours are Mon–Sat 9am–8pm, Sun 10am–5pm. You can always walk in, but booking online means you're guaranteed a spot."],
+  walkin:["Walk-ins are welcome! Just come in during business hours. Booked appointments get priority, so there may be a short wait if we're busy. Booking online guarantees your time slot.","Yes! Walk-ins are always welcome. We'll take you as soon as a chair opens up. If you want zero wait, book online."],
+  beard:["Beard trim alone is $20. Haircut + beard is $45 total (saving $5). We do shape-ups, full trims, line-ups — whatever you need to get your beard looking sharp.","Beard trim only is $20. Add it to a haircut for $45. Hot towel shave is $35 and is the smoothest experience you'll find."],
+  fade:["We do all types of fades — high, mid, low, skin, taper, burst, and temple fades. Starting at $35 for a skin fade. Book with Marcus if you want the cleanest fade in the shop."]
+};
+function getReply(m){const l=m.toLowerCase();if(/price|cost|how much|charge/.test(l))return rnd(R.price);if(/book|appointment|schedule|reserve/.test(l))return rnd(R.book);if(/hour|open|close|when/.test(l))return rnd(R.hours);if(/walk.?in|no appoint/.test(l))return rnd(R.walkin);if(/beard/.test(l))return rnd(R.beard);if(/fade/.test(l))return rnd(R.fade);if(/kid|child|son|daughter|boy/.test(l))return"Kids cuts are $25 and our barbers are great with kids. Patient, fun, and experienced. Your little one will be in good hands.";return"For anything else, just call us at (301) 555-0300 or come in during business hours. See you soon! 💈";}
+function rnd(a){return a[Math.floor(a.length*Math.random())%a.length]}
+function toggleBot(){const b=document.getElementById('vbotBox');const d=document.getElementById('vbotDot');b.classList.toggle('open');if(b.classList.contains('open'))d.style.display='none';}
+function quickSend(t){document.getElementById('vbotInput').value=t;vbotSend();}
+function vbotSend(){const i=document.getElementById('vbotInput');const m=i.value.trim();if(!m)return;const c=document.getElementById('vbotMsgs');c.innerHTML+=`<div class="vmsg user">${m}</div>`;i.value='';c.innerHTML+=`<div class="vmsg bot typing">Typing…</div>`;c.scrollTop=c.scrollHeight;setTimeout(()=>{const t=c.querySelector('.typing');if(t)t.remove();c.innerHTML+=`<div class="vmsg bot">${getReply(m)}</div>`;c.scrollTop=c.scrollHeight;},900);}
+</script>
+</body>
+</html>

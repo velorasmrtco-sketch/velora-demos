@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Comfort HVAC | Heating & Cooling | Bowie, MD</title>
+<meta name="description" content="Capital Comfort HVAC serves Bowie, MD and surrounding areas. AC repair, heating installation, and 24/7 emergency service. Get a free quote today.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--s1:#0e1220;--s2:#141926;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);--tx:#f0f4ff;--mu:rgba(240,244,255,.4);--mu2:rgba(240,244,255,.65);--ac:#4da6ff;--ac2:#2d8fff;--acd:rgba(77,166,255,.1);--acb:rgba(77,166,255,.25);--red:#ff6b6b}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 6%}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#07090f;font-weight:700;padding:14px 28px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s;cursor:pointer;border:none;font-family:'Outfit',sans-serif}
+.btn:hover{background:var(--ac2);transform:translateY(-2px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--tx);border:1px solid var(--b2);font-weight:500;padding:14px 24px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s}
+.btn-o:hover{background:var(--s2)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:200;background:rgba(7,9,15,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--b1)}
+nav{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:1100px;margin:0 auto;padding:0 6%}
+.logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--tx);text-decoration:none}
+.logo span{color:var(--ac)}
+.nl{display:flex;gap:2px}
+.nl a{color:var(--mu2);font-size:14px;padding:7px 13px;border-radius:8px;text-decoration:none;transition:all .15s}
+.nl a:hover{color:var(--tx);background:var(--s2)}
+.emergency{display:flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:8px 16px;border-radius:8px;text-decoration:none}
+.emergency span{font-size:16px}
+
+/* HERO */
+.hero{min-height:calc(100vh - 66px);display:flex;align-items:center;padding:80px 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(77,166,255,.07) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(77,166,255,.04) 0%,transparent 50%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--acb);background:var(--acd);color:var(--ac);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:22px}
+.badge::before{content:'';width:7px;height:7px;background:var(--ac);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(40px,5.5vw,66px);font-weight:800;line-height:1.02;letter-spacing:-.03em;margin-bottom:20px}
+h1 .ac{color:var(--ac)}
+.hero-sub{font-size:16px;color:var(--mu2);max-width:460px;line-height:1.75;margin-bottom:34px}
+.acts{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:40px}
+.trust-row{display:flex;flex-wrap:wrap;gap:18px}
+.tr{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mu2)}
+.tr-dot{width:6px;height:6px;background:var(--ac);border-radius:50%}
+
+/* HERO CARD */
+.hcard{background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:28px;box-shadow:0 32px 80px rgba(0,0,0,.5)}
+.hcard-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.hc-ico{width:46px;height:46px;border-radius:10px;background:var(--acd);border:1px solid var(--acb);display:flex;align-items:center;justify-content:center;font-size:22px}
+.hc-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:800}
+.hc-tag{font-size:11px;color:var(--ac)}
+.hc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.hcs{background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:12px;text-align:center}
+.hcs .n{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--ac)}
+.hcs .l{font-size:11px;color:var(--mu2);margin-top:2px}
+.hc-services{display:flex;flex-direction:column;gap:8px}
+.hcs2{display:flex;align-items:center;justify-content:space-between;background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:10px 13px;font-size:13px}
+.hcs2 span:first-child{color:var(--mu2)}
+.hcs2 span:last-child{color:var(--ac);font-weight:600}
+.hc-btn{width:100%;margin-top:14px}
+
+/* SERVICES */
+.sec{padding:88px 0}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.sec-h{font-family:'Syne',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.025em;margin-bottom:12px}
+.sec-sub{font-size:15px;color:var(--mu2);max-width:480px;line-height:1.75}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.sc{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:28px;transition:all .2s}
+.sc:hover{border-color:var(--acb);transform:translateY(-3px)}
+.sc-ico{font-size:32px;margin-bottom:14px}
+.sc h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;margin-bottom:8px}
+.sc p{font-size:13px;color:var(--mu2);line-height:1.75}
+.sc-price{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--ac);margin-top:14px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:44px}
+.wc{display:flex;gap:14px;align-items:flex-start;background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px}
+.wc-ico{width:44px;height:44px;border-radius:10px;background:var(--acd);border:1px solid var(--acb);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.wc h4{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:4px}
+.wc p{font-size:13px;color:var(--mu2);line-height:1.65}
+
+/* REVIEWS */
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.rc{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px}
+.stars{color:#fbbf24;font-size:13px;margin-bottom:10px}
+.rc p{font-size:13px;color:var(--mu2);line-height:1.75;font-style:italic;margin-bottom:14px}
+.rc-name{font-size:13px;font-weight:600;color:var(--tx)}
+.rc-loc{font-size:12px;color:var(--mu2)}
+
+/* BOOKING */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book-form{background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:36px}
+.form-h{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:5px}
+.form-sub{font-size:13px;color:var(--mu2);margin-bottom:24px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.fg label{font-size:11px;font-weight:600;color:var(--mu2);letter-spacing:.06em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--s2);border:1px solid var(--b2);border-radius:9px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:14px;padding:12px 13px;outline:none;width:100%;transition:border-color .15s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--acb)}
+.fg select option{background:#141926}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--b1);padding:36px 0}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800}
+.footer-logo span{color:var(--ac)}
+.footer-info{font-size:13px;color:var(--mu2);text-align:right;line-height:1.8}
+.velora-credit{text-align:center;padding:14px;font-size:12px;color:rgba(255,255,255,.2)}
+.velora-credit a{color:var(--ac);text-decoration:none;opacity:.7}
+
+/* CHAT */
+.chat-widget{position:fixed;bottom:24px;right:24px;z-index:500}
+.chat-btn{width:56px;height:56px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(77,166,255,.4);transition:all .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-box{position:absolute;bottom:70px;right:0;width:300px;background:var(--s1);border:1px solid var(--b2);border-radius:18px;box-shadow:0 16px 64px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden}
+.chat-box.open{display:flex}
+.chat-head{background:var(--ac);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head-ico{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;font-size:15px}
+.chat-head-name{font-weight:700;font-size:14px;color:#07090f}
+.chat-head-status{font-size:11px;color:rgba(7,9,15,.7)}
+.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:240px;overflow-y:auto}
+.msg{padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.5;max-width:85%}
+.msg.bot{background:var(--s2);border:1px solid var(--b1);color:var(--mu2);border-radius:12px 12px 12px 2px}
+.msg.user{background:var(--ac);color:#07090f;font-weight:500;border-radius:12px 12px 2px 12px;align-self:flex-end}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--b1)}
+.chat-input input{flex:1;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;padding:9px 12px;outline:none}
+.chat-send{background:var(--ac);border:none;border-radius:8px;color:#07090f;font-weight:700;font-size:13px;padding:9px 14px;cursor:pointer}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.sg{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}.rg{grid-template-columns:1fr}.book-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.sg{grid-template-columns:1fr}.nl,.emergency{display:none}.frow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="chat-widget">
+  <div class="chat-box" id="chatBox">
+    <div class="chat-head">
+      <div class="chat-head-ico">❄️</div>
+      <div><div class="chat-head-name">Capital Comfort AI</div><div class="chat-head-status">● Online 24/7</div></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hey! 👋 I'm the Capital Comfort AI assistant. Need AC repair, heating service, or a free estimate? I can help right now.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatIn" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="chat-send" onclick="sendMsg()">→</button>
+    </div>
+  </div>
+  <button class="chat-btn" onclick="document.getElementById('chatBox').classList.toggle('open')">❄️</button>
+</div>
+
+<header>
+  <nav>
+    <a href="#" class="logo">Capital<span>Comfort</span></a>
+    <div class="nl">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+    </div>
+    <a href="tel:+13015550192" class="emergency"><span>🚨</span>24/7 Emergency: (301) 555-0192</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="badge">Serving Bowie, MD & Surrounding Areas</div>
+        <h1>Your comfort.<br><span class="ac">Our priority.</span><br>24/7.</h1>
+        <p class="hero-sub">Capital Comfort HVAC repairs, installs, and maintains heating and cooling systems for homes and businesses across Prince George's County. Same-day service available.</p>
+        <div class="acts">
+          <a href="#book" class="btn">Get a Free Quote →</a>
+          <a href="tel:+13015550192" class="btn-o">📞 Call Now</a>
+        </div>
+        <div class="trust-row">
+          <div class="tr"><div class="tr-dot"></div>Licensed & Insured</div>
+          <div class="tr"><div class="tr-dot"></div>Same-Day Available</div>
+          <div class="tr"><div class="tr-dot"></div>4.9★ on Google</div>
+          <div class="tr"><div class="tr-dot"></div>Free Estimates</div>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-head">
+          <div class="hc-ico">❄️</div>
+          <div><div class="hc-name">Capital Comfort HVAC</div><div class="hc-tag">● Available now</div></div>
+        </div>
+        <div class="hc-stats">
+          <div class="hcs"><div class="n">4.9★</div><div class="l">Google Rating</div></div>
+          <div class="hcs"><div class="n">500+</div><div class="l">Jobs Done</div></div>
+          <div class="hcs"><div class="n">24/7</div><div class="l">Emergency</div></div>
+        </div>
+        <div class="hc-services">
+          <div class="hcs2"><span>AC Repair</span><span>From $89</span></div>
+          <div class="hcs2"><span>Heating Repair</span><span>From $79</span></div>
+          <div class="hcs2"><span>New Installation</span><span>Free Quote</span></div>
+          <div class="hcs2"><span>Maintenance Plan</span><span>$149/yr</span></div>
+        </div>
+        <a href="#book" class="btn hc-btn">Book Service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Our Services</div>
+    <h2 class="sec-h">Everything heating & cooling.</h2>
+    <p class="sec-sub">From emergency repairs to full system installations — we handle it all, fast.</p>
+    <div class="sg">
+      <div class="sc"><div class="sc-ico">❄️</div><h3>AC Repair & Service</h3><p>Fast diagnosis and repair for all AC brands. Same-day service available. We fix it right the first time.</p><div class="sc-price">From $89 · Same-Day Available</div></div>
+      <div class="sc"><div class="sc-ico">🔥</div><h3>Heating Repair</h3><p>Furnace, heat pump, or boiler — we service all systems. Emergency winter service available 24/7.</p><div class="sc-price">From $79 · 24/7 Emergency</div></div>
+      <div class="sc"><div class="sc-ico">🏗️</div><h3>New Installation</h3><p>Full HVAC system replacement and installation. We help you choose the right system for your home and budget.</p><div class="sc-price">Free Estimate · Financing Available</div></div>
+      <div class="sc"><div class="sc-ico">🔧</div><h3>Preventive Maintenance</h3><p>Annual tune-up keeps your system running efficiently. Avoid breakdowns before they happen.</p><div class="sc-price">$149/year · Covers 2 Visits</div></div>
+      <div class="sc"><div class="sc-ico">💨</div><h3>Air Quality</h3><p>Air purifiers, humidifiers, and duct cleaning to improve the air your family breathes every day.</p><div class="sc-price">Free Consultation</div></div>
+      <div class="sc"><div class="sc-ico">🏢</div><h3>Commercial HVAC</h3><p>Offices, retail, and commercial buildings. Scheduled maintenance contracts available.</p><div class="sc-price">Custom Quote</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why" style="border-top:1px solid var(--b1);background:var(--s1)">
+  <div class="wrap">
+    <div class="sec-tag">Why Capital Comfort</div>
+    <h2 class="sec-h">We show up. We fix it. We leave it better.</h2>
+    <div class="why-grid">
+      <div class="wc"><div class="wc-ico">⚡</div><div><h4>Same-Day Service</h4><p>Call before noon and we'll be there today. No waiting days for an appointment when your AC is out.</p></div></div>
+      <div class="wc"><div class="wc-ico">💰</div><div><h4>Upfront Pricing</h4><p>You know the price before we start. No surprises, no hidden fees. We quote it, we stick to it.</p></div></div>
+      <div class="wc"><div class="wc-ico">🏆</div><div><h4>Licensed & Insured</h4><p>Fully licensed in Maryland. All work is guaranteed — if something goes wrong, we come back and fix it free.</p></div></div>
+      <div class="wc"><div class="wc-ico">🤖</div><div><h4>AI Booking 24/7</h4><p>Book a service call online anytime. Our AI assistant can answer questions and schedule your appointment even at midnight.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Customer Reviews</div>
+    <h2 class="sec-h">4.9 stars. 200+ reviews.</h2>
+    <div class="rg">
+      <div class="rc"><div class="stars">★★★★★</div><p>"AC went out on a Friday afternoon. Capital Comfort was at my house by 6pm and had it running again in an hour. Incredible service."</p><div class="rc-name">James W.</div><div class="rc-loc">Bowie, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Honest pricing, no pressure. They told me exactly what was wrong and exactly what it would cost before touching anything. I'll never use another HVAC company."</p><div class="rc-name">Maria G.</div><div class="rc-loc">Upper Marlboro, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Booked online at 11pm, got a confirmation instantly. Tech showed up the next morning right on time. Professional and quick."</p><div class="rc-name">David K.</div><div class="rc-loc">Laurel, MD</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="book-grid">
+      <div>
+        <div class="sec-tag">Book Service</div>
+        <h2 class="sec-h">Get your free quote today.</h2>
+        <p style="font-size:15px;color:var(--mu2);line-height:1.8;margin-bottom:28px">Fill out the form and we'll call you back within 1 hour during business hours. For emergencies, call <strong style="color:var(--tx)">(301) 555-0192</strong> directly.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="wc"><div class="wc-ico">📞</div><div><h4>(301) 555-0192</h4><p>Call or text anytime — 24/7 for emergencies</p></div></div>
+          <div class="wc"><div class="wc-ico">✉️</div><div><h4>info@capitalcomforthvac.com</h4><p>Email for non-urgent requests</p></div></div>
+          <div class="wc"><div class="wc-ico">📍</div><div><h4>Bowie, MD & Surrounding Areas</h4><p>Prince George's, Anne Arundel, Howard County</p></div></div>
+        </div>
+      </div>
+      <div class="book-form">
+        <div class="form-h">Request a Service Call</div>
+        <div class="form-sub">We'll call you back within 1 hour.</div>
+        <div class="frow">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="James"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Wilson"></div>
+        </div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(301) 555-0000"></div>
+        <div class="fg"><label>Service Needed</label>
+          <select>
+            <option>AC Repair</option>
+            <option>Heating Repair</option>
+            <option>New Installation</option>
+            <option>Maintenance</option>
+            <option>Emergency Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Address</label><input type="text" placeholder="123 Main St, Bowie, MD"></div>
+        <div class="fg"><label>Describe the issue (optional)</label><textarea rows="3" placeholder="My AC is blowing warm air and making a loud noise…"></textarea></div>
+        <button class="btn" style="width:100%;justify-content:center;margin-top:4px">Request Service →</button>
+        <p style="font-size:11px;color:var(--mu);text-align:center;margin-top:10px">We'll call back within 1 hour · Free estimates</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">Capital<span>Comfort</span> HVAC</div>
+      <div class="footer-info">
+        Licensed & Insured · Serving Prince George's County, MD<br>
+        (301) 555-0192 · info@capitalcomforthvac.com
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="velora-credit">Built by <a href="#">Velora</a> — AI Websites for Local Businesses</div>
+
+<script>
+var replies={
+  'ac':["I can help with AC repair! We offer same-day service starting at $89. Want me to schedule a tech to come out?","AC issues? Our techs are available today. What's the problem — is it blowing warm air, not turning on, or something else?"],
+  'heat':["We service all heating systems — furnaces, heat pumps, boilers. Emergency service is available 24/7. Want a free estimate?","Heating issues in winter are urgent. We have same-day availability. Call (301) 555-0192 or I can book you online right now."],
+  'price':["Our AC repair starts at $89, heating repair at $79, and full installations get a free estimate. What service do you need?","Pricing depends on the issue, but we always give you an upfront quote before starting any work. No surprises."],
+  'book':["I can help you book! Just fill out the form on this page and we'll call you back within 1 hour. Or call (301) 555-0192 directly.","To book a service call, use the form below or call us at (301) 555-0192. Same-day appointments are available!"],
+  'default':["I'm here to help! You can ask me about our services, pricing, or I can help you book a service call. What do you need?","Great question! For the fastest answer, call us at (301) 555-0192 or fill out the booking form below. What can I help with?"]
+};
+function sendMsg(){
+  var inp=document.getElementById('chatIn'),val=inp.value.trim();
+  if(!val)return;
+  var msgs=document.getElementById('chatMsgs');
+  msgs.innerHTML+='<div class="msg user">'+val+'</div>';
+  inp.value='';
+  var key='default';
+  var low=val.toLowerCase();
+  if(low.includes('ac')||low.includes('cool')||low.includes('air'))key='ac';
+  else if(low.includes('heat')||low.includes('furnace')||low.includes('warm'))key='heat';
+  else if(low.includes('price')||low.includes('cost')||low.includes('much'))key='price';
+  else if(low.includes('book')||low.includes('schedule')||low.includes('appoint'))key='book';
+  var arr=replies[key];
+  var r=arr[Math.floor(Math.random()*arr.length)];
+  setTimeout(function(){msgs.innerHTML+='<div class="msg bot">'+r+'</div>';msgs.scrollTop=msgs.scrollHeight;},700);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+</script>
+</body>
+</html>

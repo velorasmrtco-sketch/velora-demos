@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Nail Studio | Nail Salon & Spa | Rockville, MD</title>
+<meta name="description" content="Luxe Nail Studio in Rockville, MD offers gel manicures, acrylics, pedicures, and nail art. Book online instantly. Walk-ins welcome.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0a0f;--s1:#150f18;--s2:#1c1422;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);--tx:#fdf6ff;--mu:rgba(253,246,255,.4);--mu2:rgba(253,246,255,.65);--ac:#e8a4c8;--ac2:#d485b2;--acd:rgba(232,164,200,.1);--acb:rgba(232,164,200,.25);--gold:#f0c060}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 6%}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#0d0a0f;font-weight:700;padding:14px 28px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s;cursor:pointer;border:none;font-family:'Outfit',sans-serif}
+.btn:hover{background:var(--ac2);transform:translateY(-2px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--tx);border:1px solid var(--b2);font-weight:500;padding:14px 24px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s}
+.btn-o:hover{background:var(--s2)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:200;background:rgba(13,10,15,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--b1)}
+nav{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:1100px;margin:0 auto;padding:0 6%}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--tx);text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--ac)}
+.nl{display:flex;gap:2px}
+.nl a{color:var(--mu2);font-size:14px;padding:7px 13px;border-radius:8px;text-decoration:none;transition:all .15s}
+.nl a:hover{color:var(--tx);background:var(--s2)}
+.ncta{background:var(--ac);color:#0d0a0f;font-size:13px;font-weight:700;padding:9px 20px;border-radius:9px;text-decoration:none}
+
+/* HERO */
+.hero{min-height:calc(100vh - 66px);display:flex;align-items:center;padding:80px 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(232,164,200,.08) 0%,transparent 55%),radial-gradient(ellipse at 20% 70%,rgba(240,192,96,.04) 0%,transparent 50%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--acb);background:var(--acd);color:var(--ac);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:22px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6vw,72px);font-weight:600;line-height:1.05;letter-spacing:-.01em;margin-bottom:20px}
+h1 .ac{color:var(--ac);font-style:italic}
+.hero-sub{font-size:15px;color:var(--mu2);max-width:440px;line-height:1.8;margin-bottom:34px}
+.acts{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:40px}
+.trust-row{display:flex;flex-wrap:wrap;gap:18px}
+.tr{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mu2)}
+.tr-dot{width:5px;height:5px;background:var(--ac);border-radius:50%}
+
+/* BOOKING CARD */
+.bcard{background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:26px;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.bcard-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:5px}
+.bcard-sub{font-size:12px;color:var(--mu2);margin-bottom:18px}
+.service-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.sp{background:var(--s2);border:1px solid var(--b2);color:var(--mu2);font-size:12px;padding:6px 12px;border-radius:100px;cursor:pointer;transition:all .15s}
+.sp:hover,.sp.sel{background:var(--acd);border-color:var(--acb);color:var(--ac)}
+.time-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+.ts{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:9px;text-align:center;font-size:12px;cursor:pointer;transition:all .15s}
+.ts:hover,.ts.sel{background:var(--acd);border-color:var(--acb);color:var(--ac)}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.fg label{font-size:10px;font-weight:600;color:var(--mu2);letter-spacing:.06em;text-transform:uppercase}
+.fg input{background:var(--s2);border:1px solid var(--b2);border-radius:8px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;padding:10px 12px;outline:none;width:100%;transition:border-color .15s}
+.fg input:focus{border-color:var(--acb)}
+
+/* SERVICES */
+.sec{padding:88px 0}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:600;letter-spacing:-.01em;margin-bottom:12px}
+.sec-sub{font-size:15px;color:var(--mu2);max-width:480px;line-height:1.75}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.sc{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:24px;transition:all .2s;position:relative;overflow:hidden}
+.sc:hover{border-color:var(--acb);transform:translateY(-3px)}
+.sc-ico{font-size:28px;margin-bottom:12px}
+.sc h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:6px}
+.sc p{font-size:12px;color:var(--mu2);line-height:1.7}
+.sc-price{font-size:14px;font-weight:700;color:var(--ac);margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.sc-time{font-size:11px;color:var(--mu);font-weight:400}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
+.gi{border-radius:12px;overflow:hidden;aspect-ratio:1;background:var(--s2);border:1px solid var(--b1);display:flex;align-items:center;justify-content:center;font-size:40px;transition:all .2s}
+.gi:hover{border-color:var(--acb);transform:scale(1.02)}
+
+/* REVIEWS */
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.rc{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:22px}
+.stars{color:var(--gold);font-size:13px;margin-bottom:10px}
+.rc p{font-size:13px;color:var(--mu2);line-height:1.75;font-style:italic;margin-bottom:14px}
+.rc-name{font-size:13px;font-weight:600}
+.rc-loc{font-size:12px;color:var(--mu2)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--b1);padding:36px 0}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600}
+.footer-logo span{color:var(--ac)}
+.footer-info{font-size:13px;color:var(--mu2);text-align:right;line-height:1.8}
+.velora-credit{text-align:center;padding:14px;font-size:12px;color:rgba(255,255,255,.2)}
+.velora-credit a{color:var(--ac);text-decoration:none;opacity:.7}
+
+/* CHAT */
+.chat-widget{position:fixed;bottom:24px;right:24px;z-index:500}
+.chat-btn{width:56px;height:56px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(232,164,200,.4);transition:all .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-box{position:absolute;bottom:70px;right:0;width:300px;background:var(--s1);border:1px solid var(--b2);border-radius:18px;box-shadow:0 16px 64px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden}
+.chat-box.open{display:flex}
+.chat-head{background:var(--ac);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head-ico{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;font-size:15px}
+.chat-head-name{font-weight:700;font-size:14px;color:#0d0a0f}
+.chat-head-status{font-size:11px;color:rgba(13,10,15,.65)}
+.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:240px;overflow-y:auto}
+.msg{padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.5;max-width:85%}
+.msg.bot{background:var(--s2);border:1px solid var(--b1);color:var(--mu2);border-radius:12px 12px 12px 2px}
+.msg.user{background:var(--ac);color:#0d0a0f;font-weight:500;border-radius:12px 12px 2px 12px;align-self:flex-end}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--b1)}
+.chat-input input{flex:1;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;padding:9px 12px;outline:none}
+.chat-send{background:var(--ac);border:none;border-radius:8px;color:#0d0a0f;font-weight:700;font-size:13px;padding:9px 14px;cursor:pointer}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.sg{grid-template-columns:1fr 1fr}.rg{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.sg{grid-template-columns:1fr}.nl,.ncta{display:none}.gallery{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="chat-widget">
+  <div class="chat-box" id="chatBox">
+    <div class="chat-head">
+      <div class="chat-head-ico">💅</div>
+      <div><div class="chat-head-name">Luxe Nail AI</div><div class="chat-head-status">● Always online</div></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hi gorgeous! 💅 Welcome to Luxe Nail Studio. Want to book an appointment, check our services, or ask about pricing? I'm here to help!</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatIn" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="chat-send" onclick="sendMsg()">→</button>
+    </div>
+  </div>
+  <button class="chat-btn" onclick="document.getElementById('chatBox').classList.toggle('open')">💅</button>
+</div>
+
+<header>
+  <nav>
+    <a href="#" class="logo">Luxe <span>Nail</span> Studio</a>
+    <div class="nl">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+    </div>
+    <a href="#book" class="ncta">Book Now →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="badge">Rockville, MD · Walk-ins Welcome</div>
+        <h1>Nails that make you feel <span class="ac">beautiful.</span></h1>
+        <p class="hero-sub">Luxe Nail Studio offers premium manicures, pedicures, acrylics, gel, and nail art in a relaxing, upscale environment. Book online in seconds — walk-ins always welcome.</p>
+        <div class="acts">
+          <a href="#book" class="btn">Book Appointment →</a>
+          <a href="tel:+13015550247" class="btn-o">📞 (301) 555-0247</a>
+        </div>
+        <div class="trust-row">
+          <div class="tr"><div class="tr-dot"></div>Online Booking</div>
+          <div class="tr"><div class="tr-dot"></div>4.9★ Google</div>
+          <div class="tr"><div class="tr-dot"></div>Walk-ins Welcome</div>
+          <div class="tr"><div class="tr-dot"></div>Organic Products</div>
+        </div>
+      </div>
+      <div class="bcard">
+        <div class="bcard-title">Book Your Appointment</div>
+        <div class="bcard-sub">Choose a service and pick a time that works for you.</div>
+        <div class="service-pills">
+          <div class="sp sel" onclick="sel(this)">Gel Manicure</div>
+          <div class="sp" onclick="sel(this)">Acrylics</div>
+          <div class="sp" onclick="sel(this)">Pedicure</div>
+          <div class="sp" onclick="sel(this)">Nail Art</div>
+          <div class="sp" onclick="sel(this)">Dip Powder</div>
+        </div>
+        <div style="font-size:11px;font-weight:600;color:var(--mu2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px">Available Today</div>
+        <div class="time-slots">
+          <div class="ts" onclick="selT(this)">10:00 AM</div>
+          <div class="ts sel" onclick="selT(this)">11:30 AM</div>
+          <div class="ts" onclick="selT(this)">1:00 PM</div>
+          <div class="ts" onclick="selT(this)">2:30 PM</div>
+          <div class="ts" onclick="selT(this)">4:00 PM</div>
+          <div class="ts" onclick="selT(this)">5:30 PM</div>
+        </div>
+        <div class="fg"><label>Your Name</label><input type="text" placeholder="Sarah Johnson"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(301) 555-0000"></div>
+        <button class="btn" style="width:100%;justify-content:center">Confirm Booking →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Our Services</div>
+    <h2 class="sec-h">Every service, done to perfection.</h2>
+    <p class="sec-sub">Premium products, expert technicians, and a relaxing atmosphere — every single visit.</p>
+    <div class="sg">
+      <div class="sc"><div class="sc-ico">💅</div><h3>Gel Manicure</h3><p>Long-lasting gel polish in hundreds of colors. Chip-free for up to 3 weeks.</p><div class="sc-price"><span>From $35</span><span class="sc-time">45 min</span></div></div>
+      <div class="sc"><div class="sc-ico">✨</div><h3>Acrylic Nails</h3><p>Full set or fill — custom shape, length, and design. Built to last.</p><div class="sc-price"><span>From $50</span><span class="sc-time">60 min</span></div></div>
+      <div class="sc"><div class="sc-ico">🦶</div><h3>Spa Pedicure</h3><p>Relaxing soak, exfoliation, massage, and polish. The ultimate treat.</p><div class="sc-price"><span>From $40</span><span class="sc-time">50 min</span></div></div>
+      <div class="sc"><div class="sc-ico">🎨</div><h3>Nail Art</h3><p>Custom designs, ombre, chrome powder, and hand-painted art by our specialists.</p><div class="sc-price"><span>From $15 add-on</span><span class="sc-time">+20 min</span></div></div>
+      <div class="sc"><div class="sc-ico">💎</div><h3>Dip Powder</h3><p>No UV light needed. Stronger than gel, lighter than acrylics. Lasts 4+ weeks.</p><div class="sc-price"><span>From $45</span><span class="sc-time">55 min</span></div></div>
+      <div class="sc"><div class="sc-ico">👰</div><h3>Bridal & Groups</h3><p>Book the whole party. Special packages for bridal parties, birthdays, and groups of 4+.</p><div class="sc-price"><span>Custom Quote</span><span class="sc-time">Call us</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gallery" style="border-top:1px solid var(--b1);background:var(--s1)">
+  <div class="wrap">
+    <div class="sec-tag">Our Work</div>
+    <h2 class="sec-h">Every set, a work of art.</h2>
+    <div class="gallery">
+      <div class="gi">💅</div><div class="gi">✨</div><div class="gi">💎</div><div class="gi">🌸</div>
+      <div class="gi">🎨</div><div class="gi">💗</div><div class="gi">🌟</div><div class="gi">🦋</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Reviews</div>
+    <h2 class="sec-h">4.9 stars. Hundreds of happy clients.</h2>
+    <div class="rg">
+      <div class="rc"><div class="stars">★★★★★</div><p>"I've been coming here for 2 years and my nails have never looked better. The AI booking is so easy — I book from my phone at midnight and they confirm instantly."</p><div class="rc-name">Ashley T.</div><div class="rc-loc">Rockville, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Best nail salon in Montgomery County, period. They remembered my name on the second visit and my gel lasts 4 weeks without chipping. I won't go anywhere else."</p><div class="rc-name">Priya M.</div><div class="rc-loc">Gaithersburg, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Brought my bridal party here and it was perfect. 6 of us, all done in 2 hours, everyone loved their nails. The salon is beautiful and so relaxing."</p><div class="rc-name">Jennifer K.</div><div class="rc-loc">Bethesda, MD</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book" style="border-top:1px solid var(--b1)">
+  <div class="wrap" style="text-align:center">
+    <div class="sec-tag">Hours & Location</div>
+    <h2 class="sec-h">Come visit us.</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;text-align:left">
+      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:24px"><div style="font-size:24px;margin-bottom:10px">📍</div><h4 style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:6px">Location</h4><p style="font-size:13px;color:var(--mu2)">1822 Rockville Pike, Suite 4<br>Rockville, MD 20852</p></div>
+      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:24px"><div style="font-size:24px;margin-bottom:10px">🕐</div><h4 style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:6px">Hours</h4><p style="font-size:13px;color:var(--mu2)">Mon–Fri: 10am–7pm<br>Sat–Sun: 9am–6pm</p></div>
+      <div style="background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:24px"><div style="font-size:24px;margin-bottom:10px">📞</div><h4 style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:6px">Contact</h4><p style="font-size:13px;color:var(--mu2)">(301) 555-0247<br>luxenailmd@gmail.com</p></div>
+    </div>
+    <a href="#" class="btn" style="margin-top:32px">Book Online Now →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">Luxe <span>Nail</span> Studio</div>
+      <div class="footer-info">1822 Rockville Pike · Rockville, MD 20852<br>(301) 555-0247 · luxenailmd@gmail.com</div>
+    </div>
+  </div>
+</footer>
+<div class="velora-credit">Built by <a href="#">Velora</a> — AI Websites for Local Businesses</div>
+
+<script>
+function sel(el){document.querySelectorAll('.sp').forEach(function(e){e.classList.remove('sel')});el.classList.add('sel')}
+function selT(el){document.querySelectorAll('.ts').forEach(function(e){e.classList.remove('sel')});el.classList.add('sel')}
+var replies={
+  'book':["I can help you book! Choose your service and time slot on this page, or call (301) 555-0247. We have openings today!","To book, just pick your service and time at the top of this page. Takes 30 seconds and you'll get a confirmation text!"],
+  'price':["Our gel manicures start at $35, acrylics from $50, and spa pedicures from $40. Nail art is a $15 add-on. Want to book?","Prices start at $35 for gel and go up based on length and design. Check our services section for the full menu!"],
+  'hours':["We're open Mon–Fri 10am–7pm and Sat–Sun 9am–6pm. Walk-ins are welcome but booking ahead guarantees your spot!","Our hours are Monday to Friday 10am–7pm and weekends 9am–6pm. Want me to help you book a time?"],
+  'default':["I'm here to help you book or answer any questions about our services! What are you looking for today? 💅","Hi! I can help with booking, pricing, or anything else about Luxe Nail Studio. What do you need?"]
+};
+function sendMsg(){
+  var inp=document.getElementById('chatIn'),val=inp.value.trim();
+  if(!val)return;
+  var msgs=document.getElementById('chatMsgs');
+  msgs.innerHTML+='<div class="msg user">'+val+'</div>';
+  inp.value='';
+  var key='default',low=val.toLowerCase();
+  if(low.includes('book')||low.includes('appoint')||low.includes('schedul'))key='book';
+  else if(low.includes('price')||low.includes('cost')||low.includes('much'))key='price';
+  else if(low.includes('hour')||low.includes('open')||low.includes('close'))key='hours';
+  var arr=replies[key],r=arr[Math.floor(Math.random()*arr.length)];
+  setTimeout(function(){msgs.innerHTML+='<div class="msg bot">'+r+'</div>';msgs.scrollTop=msgs.scrollHeight;},700);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+</script>
+</body>
+</html>

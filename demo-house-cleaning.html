@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Start Cleaning Co. — Silver Spring, MD</title>
+<meta name="description" content="Professional house cleaning in Silver Spring & Rockville, MD. Standard, deep clean & recurring packages. Book online today.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f8faf8;--s1:#fff;--s2:#f2f5f2;--b1:rgba(0,0,0,.07);--b2:rgba(0,0,0,.12);--tx:#1a2020;--mu2:rgba(26,32,32,.65);--ac:#30a060;--acd:rgba(48,160,96,.1);--acb:rgba(48,160,96,.25)}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--b1);background:#fff;position:sticky;top:0;z-index:100}
+.logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800}.logo span{color:var(--ac)}
+.nav-cta{background:var(--ac);color:#fff;font-weight:700;font-size:12px;padding:9px 18px;border-radius:8px;text-decoration:none;font-family:'Syne',sans-serif}
+.hero{background:linear-gradient(135deg,#e8f5ee,#f0faf5);padding:70px 5% 60px}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:50px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--acb);border-radius:20px;padding:5px 14px 5px 5px;font-size:12px;font-weight:600;color:var(--ac);margin-bottom:16px}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--ac)}
+h1{font-family:'Syne',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:800;line-height:1.2;margin-bottom:14px;color:var(--tx)}
+h1 span{color:var(--ac)}
+.hero-sub{font-size:15px;color:var(--mu2);margin-bottom:24px;max-width:440px}
+.trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu2);font-weight:600}
+.trust-icon{font-size:16px}
+.hero-btns{display:flex;gap:12px}
+.btn{padding:13px 26px;border-radius:9px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;text-decoration:none;cursor:pointer;border:none;transition:.2s}
+.btn-p{background:var(--ac);color:#fff}.btn-p:hover{background:#268050}
+.btn-s{background:#fff;color:var(--tx);border:1px solid var(--b2)}.btn-s:hover{border-color:var(--ac);color:var(--ac)}
+.quote-widget{background:#fff;border:1px solid var(--b2);border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(48,160,96,.12)}
+.quote-widget h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;color:var(--tx)}
+.pkg-btn{display:block;width:100%;text-align:left;background:var(--s2);border:2px solid transparent;border-radius:10px;padding:12px 14px;margin-bottom:8px;cursor:pointer;transition:.15s;font-family:'Outfit',sans-serif}
+.pkg-btn:hover,.pkg-btn.sel{border-color:var(--ac);background:var(--acd)}
+.pkg-btn-name{font-weight:700;font-size:13px;color:var(--tx)}
+.pkg-btn-price{font-size:11px;color:var(--mu2);margin-top:2px}
+.book-cta{width:100%;background:var(--ac);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;padding:13px;border-radius:9px;border:none;cursor:pointer;margin-top:4px}
+.section{padding:60px 5%;max-width:1100px;margin:0 auto}
+h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:30px;color:var(--tx)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:#fff;border:1px solid var(--b1);border-radius:14px;padding:22px}
+.svc-icon{font-size:28px;margin-bottom:10px}
+.svc h3{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--tx)}
+.svc p{font-size:12px;color:var(--mu2)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}
+.how-step{text-align:center;padding:20px 14px}
+.how-num{width:40px;height:40px;border-radius:50%;background:var(--acd);border:2px solid var(--acb);font-family:'Syne',sans-serif;font-weight:800;color:var(--ac);font-size:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.how-step h3{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--tx)}
+.how-step p{font-size:12px;color:var(--mu2)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev{background:#fff;border:1px solid var(--b1);border-radius:14px;padding:20px}
+.rev-stars{color:#f0a020;font-size:13px;margin-bottom:8px}
+.rev-text{font-size:13px;color:var(--mu2);margin-bottom:12px;line-height:1.7}
+.rev-author{font-weight:700;font-size:13px;color:var(--tx)}
+.book-section{background:#fff;border:1px solid var(--b1);border-radius:16px;padding:36px;max-width:600px;margin:0 auto}
+.book-section h2{text-align:center;font-size:22px;margin-bottom:6px}
+.book-sub{font-size:13px;color:var(--mu2);text-align:center;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-group{margin-bottom:12px}
+label{font-size:12px;font-weight:600;color:var(--mu2);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:11px 14px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ac)}
+textarea{resize:vertical;min-height:80px}
+.submit-btn{width:100%;background:var(--ac);color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:14px;border-radius:10px;border:none;cursor:pointer;margin-top:8px}
+.velora-credit{text-align:center;padding:30px;font-size:11px;color:var(--mu2);border-top:1px solid var(--b1)}.velora-credit span{color:var(--ac);font-weight:700}
+/* CHATBOT */
+.vbot{position:fixed;bottom:24px;right:24px;z-index:1000}
+.vbot-btn{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--ac),#20804a);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 16px rgba(48,160,96,.35);position:relative}
+.vbot-notify{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#f06060;border-radius:50%;border:2px solid #f8faf8}
+.vbot-box{display:none;position:absolute;bottom:64px;right:0;width:300px;background:#fff;border:1px solid var(--b2);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.15)}
+.vbot-box.open{display:flex;flex-direction:column}
+.vbot-head{background:linear-gradient(90deg,#1a4030,#0d2818);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.vbot-av{width:32px;height:32px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:14px}
+.vbot-name{font-weight:700;font-size:13px;flex:1;color:#fff}
+.vbot-status{font-size:10px;color:var(--acb)}
+.vbot-close{background:none;border:none;color:rgba(255,255,255,.6);cursor:pointer;font-size:16px;padding:4px}
+.vbot-msgs{padding:14px;height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.vmsg{max-width:88%;padding:9px 12px;border-radius:10px;font-size:12px;line-height:1.6}
+.vmsg.bot{background:var(--s2);color:var(--tx);align-self:flex-start;border-radius:10px 10px 10px 2px}
+.vmsg.user{background:var(--acd);color:var(--tx);align-self:flex-end;border-radius:10px 10px 2px 10px;border:1px solid var(--acb)}
+.vmsg.typing{color:var(--mu2);font-style:italic}
+.vbot-quick{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 10px}
+.vq{background:var(--s2);border:1px solid var(--b2);color:var(--mu2);font-size:10px;padding:4px 9px;border-radius:5px;cursor:pointer;font-family:'Outfit',sans-serif}
+.vq:hover{border-color:var(--ac);color:var(--ac)}
+.vbot-input{display:flex;padding:10px 14px;gap:8px;border-top:1px solid var(--b1)}
+.vbot-input input{flex:1;padding:8px 12px;font-size:12px;border-radius:7px;background:var(--s2);border:1px solid var(--b1);color:var(--tx)}
+.vbot-send{background:var(--ac);border:none;border-radius:7px;padding:8px 12px;cursor:pointer;font-size:13px;color:#fff}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}.how-grid{grid-template-columns:1fr 1fr}.reviews{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Fresh<span>Start</span></div>
+  <a class="nav-cta" href="#book">Get a Quote</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="badge"><span class="badge-dot"></span>Bonded, Insured & Background Checked</div>
+      <h1>A Cleaner Home, <span>Guaranteed</span></h1>
+      <p class="hero-sub">Professional house cleaning in Silver Spring & Rockville, MD. Trusted by 200+ local families. Book online in 60 seconds.</p>
+      <div class="trust-row">
+        <div class="trust-item"><span class="trust-icon">🛡️</span>Fully Insured</div>
+        <div class="trust-item"><span class="trust-icon">✅</span>Background Checked</div>
+        <div class="trust-item"><span class="trust-icon">♻️</span>Eco-Friendly Products</div>
+        <div class="trust-item"><span class="trust-icon">⭐</span>5-Star Rated</div>
+      </div>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="#book">Book Now</a>
+        <a class="btn btn-s" href="tel:3015550100">Call Us</a>
+      </div>
+    </div>
+    <div class="quote-widget">
+      <h3>What are you looking for?</h3>
+      <button class="pkg-btn sel" onclick="selectPkg(this)"><div class="pkg-btn-name">Standard Clean</div><div class="pkg-btn-price">Kitchen, bathrooms, living areas — starting at $120</div></button>
+      <button class="pkg-btn" onclick="selectPkg(this)"><div class="pkg-btn-name">Deep Clean</div><div class="pkg-btn-price">Top to bottom scrub, inside appliances — starting at $220</div></button>
+      <button class="pkg-btn" onclick="selectPkg(this)"><div class="pkg-btn-name">Move In / Move Out</div><div class="pkg-btn-price">Full home ready for new occupants — starting at $280</div></button>
+      <button class="pkg-btn" onclick="selectPkg(this)"><div class="pkg-btn-name">Weekly / Bi-Weekly</div><div class="pkg-btn-price">Save 15% with recurring service — starting at $100</div></button>
+      <button class="book-cta" href="#book" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">Get My Quote →</button>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">🏠</div><h3>Standard Clean</h3><p>Kitchens, bathrooms, bedrooms, living areas. Vacuuming, mopping, dusting, and surface wipe-down.</p></div>
+    <div class="svc"><div class="svc-icon">🔍</div><h3>Deep Clean</h3><p>Everything in a standard clean plus inside oven, fridge, cabinets, baseboards, window sills, and detailed scrubbing throughout.</p></div>
+    <div class="svc"><div class="svc-icon">📦</div><h3>Move In / Move Out</h3><p>Full home cleaning for incoming or outgoing tenants. We make sure the space is spotless and deposit-ready.</p></div>
+    <div class="svc"><div class="svc-icon">📅</div><h3>Recurring Service</h3><p>Weekly or bi-weekly cleans at a discounted rate. Same cleaner every visit. Skip or cancel anytime.</p></div>
+    <div class="svc"><div class="svc-icon">🏢</div><h3>Office Cleaning</h3><p>Small to medium offices in the Silver Spring / Rockville area. After-hours service available.</p></div>
+    <div class="svc"><div class="svc-icon">🎉</div><h3>Post-Event Clean</h3><p>After parties, gatherings, or Airbnb turnovers. Quick turnaround available with advance notice.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>How It Works</h2>
+  <div class="how-grid">
+    <div class="how-step"><div class="how-num">1</div><h3>Book Online</h3><p>Choose your service, pick a date, and submit. Done in under 60 seconds.</p></div>
+    <div class="how-step"><div class="how-num">2</div><h3>We Confirm</h3><p>You'll get a text confirmation and reminder the morning of your appointment.</p></div>
+    <div class="how-step"><div class="how-num">3</div><h3>We Clean</h3><p>Our vetted cleaners arrive on time with all supplies and equipment.</p></div>
+    <div class="how-step"><div class="how-num">4</div><h3>You Relax</h3><p>Come home to a spotless space. If anything's off, we re-clean for free.</p></div>
+  </div>
+  <div class="reviews">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"I've used 3 different cleaning services and Fresh Start is the only one I've ever re-booked. They actually clean things other services miss."</p><div class="rev-author">Priya M. — Silver Spring</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"They did our move-out clean and our landlord literally said it was the cleanest he'd seen an apartment left. Got our full deposit back."</p><div class="rev-author">Kevin L. — Rockville</div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Bi-weekly service has changed my life. Worth every penny. The same cleaner comes each time and knows exactly how I like things."</p><div class="rev-author">Amanda S. — Gaithersburg</div></div>
+  </div>
+</div>
+
+<div class="section" id="book">
+  <div class="book-section">
+    <h2>Book Your Clean</h2>
+    <p class="book-sub">We'll confirm your appointment and send a quote within 2 hours.</p>
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="Priya"></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Martinez"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(301) 555-0000"></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+    </div>
+    <div class="form-group"><label>Service Type</label>
+      <select><option>Standard Clean ($120+)</option><option>Deep Clean ($220+)</option><option>Move In / Move Out ($280+)</option><option>Weekly Recurring ($100+)</option><option>Bi-Weekly Recurring ($110+)</option><option>Office Cleaning</option><option>Post-Event Clean</option></select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Home Size</label><select><option>Studio / 1BR</option><option>2 Bedroom</option><option>3 Bedroom</option><option>4+ Bedroom</option></select></div>
+      <div class="form-group"><label>Preferred Date</label><input type="date"></div>
+    </div>
+    <div class="form-group"><label>Address</label><input type="text" placeholder="123 Main St, Silver Spring, MD"></div>
+    <div class="form-group"><label>Notes (optional)</label><textarea placeholder="Any specific areas of concern, pets, or special instructions..."></textarea></div>
+    <button class="submit-btn">Request Booking →</button>
+  </div>
+</div>
+
+<div class="velora-credit">Built by <span>Velora</span> — AI-powered websites for local businesses · <a href="#" style="color:var(--ac)">velora.associates</a></div>
+
+<!-- CHATBOT -->
+<div class="vbot" id="vbot">
+  <div class="vbot-box" id="vbotBox">
+    <div class="vbot-head">
+      <div class="vbot-av">🏠</div>
+      <div><div class="vbot-name">Fresh Start Assistant</div><div class="vbot-status">● Online now</div></div>
+      <button class="vbot-close" onclick="toggleBot()">✕</button>
+    </div>
+    <div class="vbot-msgs" id="vbotMsgs">
+      <div class="vmsg bot">Hi there! 👋 I'm here to help with questions about our cleaning services, pricing, or booking. What can I help with?</div>
+    </div>
+    <div class="vbot-quick">
+      <button class="vq" onclick="quickSend('How much does a standard clean cost?')">Pricing</button>
+      <button class="vq" onclick="quickSend('How do I book a clean?')">Book</button>
+      <button class="vq" onclick="quickSend('Do you do recurring cleaning?')">Recurring</button>
+      <button class="vq" onclick="quickSend('Are your cleaners insured?')">Trust</button>
+    </div>
+    <div class="vbot-input">
+      <input type="text" id="vbotInput" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')vbotSend()">
+      <button class="vbot-send" onclick="vbotSend()">→</button>
+    </div>
+  </div>
+  <button class="vbot-btn" onclick="toggleBot()" id="vbotBtnEl">🏠<span class="vbot-notify" id="vbotDot"></span></button>
+</div>
+<script>
+function selectPkg(el){document.querySelectorAll('.pkg-btn').forEach(b=>b.classList.remove('sel'));el.classList.add('sel');}
+const R={
+  price:["Standard cleans start at $120 for a 1–2BR home. Deep cleans start at $220. Move-in/out cleans start at $280. Recurring bi-weekly service starts at $100. Final price depends on home size — we'll give you an exact quote when you book!","Pricing depends on your home size: Standard from $120, Deep Clean from $220, Move-out from $280. For a precise quote, fill out the booking form and we'll send you a price within 2 hours."],
+  book:["Super easy! Just fill out the booking form on this page — choose your service, pick a date, and we'll confirm within 2 hours with your exact quote.","Use the form on this page. Pick your service, date, and home size. We'll text you a confirmation and quote within 2 hours."],
+  recurring:["Yes! We offer weekly and bi-weekly recurring service. It's our most popular option because you save 15% vs. one-time cleans, and you get the same cleaner every visit so they know your home.","Absolutely. Weekly starts at $90, bi-weekly at $100. You'll always get the same cleaner, and you can skip or cancel anytime with 24 hours notice."],
+  trust:["All our cleaners are background-checked, vetted, and insured. We're also fully bonded, so you're protected. We use eco-friendly products that are safe for kids and pets.","Yes — every cleaner goes through a background check before joining our team, and we carry full liability insurance. We also use pet-safe, eco-friendly cleaning products."],
+  deep:["A deep clean covers everything in a standard clean PLUS inside the oven and fridge, inside cabinets, baseboards, window sills, and detailed scrubbing in bathrooms and kitchen. It takes about twice as long as a standard clean.","Deep cleans include standard cleaning plus inside appliances, inside cabinets, baseboards, window sills — basically everything. Starts at $220 for a 1–2BR home."],
+  hours:["We're available Monday–Saturday, 8am–6pm. We can sometimes accommodate Sundays for move-out cleans with advance notice."]
+};
+function getReply(m){const l=m.toLowerCase();if(/price|cost|how much|charge/.test(l))return rnd(R.price);if(/book|appointment|schedule/.test(l))return rnd(R.book);if(/recurring|regular|weekly|bi-weekly|subscription/.test(l))return rnd(R.recurring);if(/insure|bond|trust|safe|background/.test(l))return rnd(R.trust);if(/deep|thorough/.test(l))return rnd(R.deep);if(/hour|open|available/.test(l))return rnd(R.hours);if(/move|out|in|vacate|tenant/.test(l))return"We offer move-in and move-out cleans starting at $280. These are our most thorough cleans — everything is done top to bottom. Perfect for getting a deposit back or welcoming new tenants.";return"Happy to help! For the fastest answer, fill out the booking form or call us at (301) 555-0100 and we'll help you right away.";}
+function rnd(a){return a[Math.floor(a.length*Math.random())%a.length]}
+function toggleBot(){const b=document.getElementById('vbotBox');const d=document.getElementById('vbotDot');b.classList.toggle('open');if(b.classList.contains('open'))d.style.display='none';}
+function quickSend(t){document.getElementById('vbotInput').value=t;vbotSend();}
+function vbotSend(){const i=document.getElementById('vbotInput');const m=i.value.trim();if(!m)return;const c=document.getElementById('vbotMsgs');c.innerHTML+=`<div class="vmsg user">${m}</div>`;i.value='';c.innerHTML+=`<div class="vmsg bot typing">Typing…</div>`;c.scrollTop=c.scrollHeight;setTimeout(()=>{const t=c.querySelector('.typing');if(t)t.remove();c.innerHTML+=`<div class="vmsg bot">${getReply(m)}</div>`;c.scrollTop=c.scrollHeight;},900);}
+</script>
+</body>
+</html>

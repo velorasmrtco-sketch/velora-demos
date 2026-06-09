@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Edge Lawn & Landscape | Upper Marlboro, MD</title>
+<meta name="description" content="Green Edge provides professional lawn care, landscaping, and hardscape services in Upper Marlboro, MD. Free estimates. Residential & commercial.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080f08;--s1:#0e150e;--s2:#141e14;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.13);--tx:#f0f7f0;--mu:rgba(240,247,240,.4);--mu2:rgba(240,247,240,.65);--ac:#5dba4a;--ac2:#4da03d;--acd:rgba(93,186,74,.1);--acb:rgba(93,186,74,.25);--gold:#f0c060}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 6%}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#080f08;font-weight:700;padding:14px 28px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s;cursor:pointer;border:none;font-family:'Outfit',sans-serif}
+.btn:hover{background:var(--ac2);transform:translateY(-2px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--tx);border:1px solid var(--b2);font-weight:500;padding:14px 24px;border-radius:9px;text-decoration:none;font-size:15px;transition:all .2s}
+.btn-o:hover{background:var(--s2)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:200;background:rgba(8,15,8,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--b1)}
+nav{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:1100px;margin:0 auto;padding:0 6%}
+.logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--tx);text-decoration:none}
+.logo span{color:var(--ac)}
+.nl{display:flex;gap:2px}
+.nl a{color:var(--mu2);font-size:14px;padding:7px 13px;border-radius:8px;text-decoration:none;transition:all .15s}
+.nl a:hover{color:var(--tx);background:var(--s2)}
+.ncta{background:var(--ac);color:#080f08;font-size:13px;font-weight:700;padding:9px 20px;border-radius:9px;text-decoration:none}
+
+/* HERO */
+.hero{min-height:calc(100vh - 66px);display:flex;align-items:center;padding:80px 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(93,186,74,.07) 0%,transparent 55%),radial-gradient(ellipse at 10% 30%,rgba(93,186,74,.04) 0%,transparent 50%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--acb);background:var(--acd);color:var(--ac);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:22px}
+.badge::before{content:'';width:7px;height:7px;background:var(--ac);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(40px,5.5vw,64px);font-weight:800;line-height:1.02;letter-spacing:-.03em;margin-bottom:20px}
+h1 .ac{color:var(--ac)}
+.hero-sub{font-size:16px;color:var(--mu2);max-width:460px;line-height:1.75;margin-bottom:34px}
+.acts{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:40px}
+.trust-row{display:flex;flex-wrap:wrap;gap:18px}
+.tr{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--mu2)}
+.tr-dot{width:6px;height:6px;background:var(--ac);border-radius:50%}
+
+/* QUOTE CARD */
+.qcard{background:var(--s1);border:1px solid var(--b2);border-radius:20px;padding:26px;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.qcard-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:5px}
+.qcard-sub{font-size:12px;color:var(--mu2);margin-bottom:20px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.fg label{font-size:10px;font-weight:600;color:var(--mu2);letter-spacing:.06em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--s2);border:1px solid var(--b2);border-radius:9px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:14px;padding:12px 13px;outline:none;width:100%;transition:border-color .15s}
+.fg input:focus,.fg select:focus{border-color:var(--acb)}
+.fg select option{background:#141e14}
+.qstats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;margin-bottom:16px}
+.qs{background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:12px;text-align:center}
+.qs .n{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--ac)}
+.qs .l{font-size:10px;color:var(--mu2);margin-top:2px}
+
+/* SERVICES */
+.sec{padding:88px 0}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.sec-h{font-family:'Syne',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.025em;margin-bottom:12px}
+.sec-sub{font-size:15px;color:var(--mu2);max-width:480px;line-height:1.75}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.sc{background:var(--s1);border:1px solid var(--b1);border-radius:16px;padding:28px;transition:all .2s}
+.sc:hover{border-color:var(--acb);transform:translateY(-3px)}
+.sc-ico{font-size:30px;margin-bottom:14px}
+.sc h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;margin-bottom:8px}
+.sc p{font-size:13px;color:var(--mu2);line-height:1.75}
+.sc-cta{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ac);margin-top:14px;text-decoration:none;border:1px solid var(--acb);padding:5px 12px;border-radius:100px;background:var(--acd)}
+
+/* PROCESS */
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;position:relative}
+.pg::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--b2);z-index:0}
+.pc{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px 18px;text-align:center;position:relative;z-index:1}
+.pc-n{width:44px;height:44px;border-radius:50%;background:var(--acd);border:2px solid var(--acb);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--ac);margin:0 auto 14px}
+.pc h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:6px}
+.pc p{font-size:12px;color:var(--mu2);line-height:1.6}
+
+/* REVIEWS */
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.rc{background:var(--s1);border:1px solid var(--b1);border-radius:14px;padding:22px}
+.stars{color:var(--gold);font-size:13px;margin-bottom:10px}
+.rc p{font-size:13px;color:var(--mu2);line-height:1.75;font-style:italic;margin-bottom:14px}
+.rc-name{font-size:13px;font-weight:600}
+.rc-loc{font-size:12px;color:var(--mu2)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--b1);padding:36px 0}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800}
+.footer-logo span{color:var(--ac)}
+.footer-info{font-size:13px;color:var(--mu2);text-align:right;line-height:1.8}
+.velora-credit{text-align:center;padding:14px;font-size:12px;color:rgba(255,255,255,.2)}
+.velora-credit a{color:var(--ac);text-decoration:none;opacity:.7}
+
+/* CHAT */
+.chat-widget{position:fixed;bottom:24px;right:24px;z-index:500}
+.chat-btn{width:56px;height:56px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(93,186,74,.4);transition:all .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-box{position:absolute;bottom:70px;right:0;width:300px;background:var(--s1);border:1px solid var(--b2);border-radius:18px;box-shadow:0 16px 64px rgba(0,0,0,.6);display:none;flex-direction:column;overflow:hidden}
+.chat-box.open{display:flex}
+.chat-head{background:var(--ac);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head-ico{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;font-size:15px}
+.chat-head-name{font-weight:700;font-size:14px;color:#080f08}
+.chat-head-status{font-size:11px;color:rgba(8,15,8,.65)}
+.chat-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:240px;overflow-y:auto}
+.msg{padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.5;max-width:85%}
+.msg.bot{background:var(--s2);border:1px solid var(--b1);color:var(--mu2);border-radius:12px 12px 12px 2px}
+.msg.user{background:var(--ac);color:#080f08;font-weight:500;border-radius:12px 12px 2px 12px;align-self:flex-end}
+.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--b1)}
+.chat-input input{flex:1;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--tx);font-family:'Outfit',sans-serif;font-size:13px;padding:9px 12px;outline:none}
+.chat-send{background:var(--ac);border:none;border-radius:8px;color:#080f08;font-weight:700;font-size:13px;padding:9px 14px;cursor:pointer}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.sg{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.rg{grid-template-columns:1fr}}
+@media(max-width:600px){.sg{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.nl,.ncta{display:none}}
+</style>
+</head>
+<body>
+
+<div class="chat-widget">
+  <div class="chat-box" id="chatBox">
+    <div class="chat-head">
+      <div class="chat-head-ico">🌿</div>
+      <div><div class="chat-head-name">Green Edge AI</div><div class="chat-head-status">● Always available</div></div>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hey! 👋 I'm the Green Edge assistant. Need a lawn care quote, want to schedule a service, or have questions? I can help right now.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatIn" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="chat-send" onclick="sendMsg()">→</button>
+    </div>
+  </div>
+  <button class="chat-btn" onclick="document.getElementById('chatBox').classList.toggle('open')">🌿</button>
+</div>
+
+<header>
+  <nav>
+    <a href="#" class="logo">Green<span>Edge</span></a>
+    <div class="nl">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#quote">Free Quote</a>
+    </div>
+    <a href="#quote" class="ncta">Free Quote →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="badge">Upper Marlboro, MD · Free Estimates</div>
+        <h1>Your lawn.<br><span class="ac">Our craft.</span><br>Every week.</h1>
+        <p class="hero-sub">Green Edge provides professional lawn care, landscaping design, and hardscape installation across Prince George's County. Residential and commercial. Satisfaction guaranteed.</p>
+        <div class="acts">
+          <a href="#quote" class="btn">Get Free Quote →</a>
+          <a href="tel:+13015550318" class="btn-o">📞 (301) 555-0318</a>
+        </div>
+        <div class="trust-row">
+          <div class="tr"><div class="tr-dot"></div>Free Estimates</div>
+          <div class="tr"><div class="tr-dot"></div>Licensed & Insured</div>
+          <div class="tr"><div class="tr-dot"></div>4.8★ Google</div>
+          <div class="tr"><div class="tr-dot"></div>Satisfaction Guarantee</div>
+        </div>
+      </div>
+      <div class="qcard">
+        <div class="qcard-title">Get Your Free Quote</div>
+        <div class="qcard-sub">Tell us about your property and we'll get back to you within 2 hours.</div>
+        <div class="fg"><label>Your Name</label><input type="text" placeholder="Carlos Rivera"></div>
+        <div class="fg"><label>Property Address</label><input type="text" placeholder="123 Oak St, Upper Marlboro, MD"></div>
+        <div class="fg"><label>Service Needed</label>
+          <select>
+            <option>Weekly Lawn Mowing</option>
+            <option>Landscaping Design</option>
+            <option>Mulching & Cleanup</option>
+            <option>Hardscape / Patio</option>
+            <option>Tree & Shrub Care</option>
+            <option>Snow Removal</option>
+            <option>Full Property Package</option>
+          </select>
+        </div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(301) 555-0000"></div>
+        <button class="btn" style="width:100%;justify-content:center">Get My Free Quote →</button>
+        <div class="qstats">
+          <div class="qs"><div class="n">300+</div><div class="l">Properties Served</div></div>
+          <div class="qs"><div class="n">4.8★</div><div class="l">Google Rating</div></div>
+          <div class="qs"><div class="n">Free</div><div class="l">Estimates</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Our Services</div>
+    <h2 class="sec-h">Everything your property needs.</h2>
+    <p class="sec-sub">From weekly mowing to full landscape transformations — we handle it all.</p>
+    <div class="sg">
+      <div class="sc"><div class="sc-ico">🌿</div><h3>Lawn Mowing</h3><p>Weekly and bi-weekly mowing, edging, and cleanup. Consistent crew, consistent results every visit.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+      <div class="sc"><div class="sc-ico">🌳</div><h3>Landscaping Design</h3><p>Custom landscape plans, planting, grading, and installation. We turn your yard into something you're proud of.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+      <div class="sc"><div class="sc-ico">🪨</div><h3>Hardscape & Patios</h3><p>Patios, walkways, retaining walls, and fire pits. Built to last with quality materials.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+      <div class="sc"><div class="sc-ico">🍂</div><h3>Mulching & Cleanup</h3><p>Spring and fall cleanups, mulch installation, leaf removal, and gutter cleaning. Keep your property sharp year-round.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+      <div class="sc"><div class="sc-ico">✂️</div><h3>Tree & Shrub Care</h3><p>Trimming, pruning, and shaping of trees and shrubs. Keep your landscaping healthy and clean.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+      <div class="sc"><div class="sc-ico">❄️</div><h3>Snow Removal</h3><p>Residential and commercial snow plowing and salting. Priority contracts available before winter.</p><a href="#quote" class="sc-cta">Get Quote →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="process" style="border-top:1px solid var(--b1);background:var(--s1)">
+  <div class="wrap">
+    <div class="sec-tag">How It Works</div>
+    <h2 class="sec-h">Simple. Fast. No surprises.</h2>
+    <div class="pg">
+      <div class="pc"><div class="pc-n">1</div><h4>Request a Quote</h4><p>Fill out the form or call us. Tell us your property and what you need.</p></div>
+      <div class="pc"><div class="pc-n">2</div><h4>We Assess</h4><p>We review your property — usually same day for standard services.</p></div>
+      <div class="pc"><div class="pc-n">3</div><h4>You Approve</h4><p>We send an upfront quote. You approve it before we start anything.</p></div>
+      <div class="pc"><div class="pc-n">4</div><h4>We Get to Work</h4><p>Crew arrives on schedule. We clean up completely when done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="border-top:1px solid var(--b1)">
+  <div class="wrap">
+    <div class="sec-tag">Reviews</div>
+    <h2 class="sec-h">300+ happy property owners.</h2>
+    <div class="rg">
+      <div class="rc"><div class="stars">★★★★★</div><p>"Green Edge has been taking care of my lawn for 2 years. They show up every week without me having to call, and my yard looks better than it ever has."</p><div class="rc-name">Robert L.</div><div class="rc-loc">Upper Marlboro, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"Got quotes from 3 companies. Green Edge was the most professional — showed up on time, gave me a clear written quote, and finished the patio in 3 days. Incredible work."</p><div class="rc-name">Angela P.</div><div class="rc-loc">Bowie, MD</div></div>
+      <div class="rc"><div class="stars">★★★★★</div><p>"I found them through their website at 10pm, filled out the quote form, and they called me the next morning. Fast, professional, and my backyard looks amazing now."</p><div class="rc-name">Kevin T.</div><div class="rc-loc">Mitchellville, MD</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="quote" style="border-top:1px solid var(--b1);text-align:center">
+  <div class="wrap">
+    <div class="sec-tag">Ready to Start?</div>
+    <h2 class="sec-h">Get your free quote today.</h2>
+    <p style="font-size:15px;color:var(--mu2);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.75">Call or text us at <strong style="color:var(--tx)">(301) 555-0318</strong>, fill out the form above, or chat with our AI assistant. We respond within 2 hours.</p>
+    <a href="tel:+13015550318" class="btn" style="font-size:16px">📞 Call (301) 555-0318</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">Green<span>Edge</span> Lawn & Landscape</div>
+      <div class="footer-info">Upper Marlboro, MD · Prince George's County<br>(301) 555-0318 · greenedgemd@gmail.com</div>
+    </div>
+  </div>
+</footer>
+<div class="velora-credit">Built by <a href="#">Velora</a> — AI Websites for Local Businesses</div>
+
+<script>
+var replies={
+  'quote':["I can get you a free quote right now! Just fill out the form at the top of this page — we respond within 2 hours. Or call (301) 555-0318 directly!","For a free estimate, fill out the quick form on this page or call us at (301) 555-0318. We usually respond the same day!"],
+  'price':["Pricing depends on your property size and service. Weekly mowing typically starts around $45–$80/visit. Fill out the form for an exact quote — it's free!","We give upfront quotes with no hidden fees. Mowing starts around $45, landscaping projects vary. Want a free estimate for your property?"],
+  'mow':["We offer weekly and bi-weekly mowing, edging, and cleanup. Pricing starts around $45 depending on lot size. Want a free quote?","Lawn mowing is one of our most popular services! We service all of Prince George's County. Fill out the form for pricing on your specific property."],
+  'default':["I'm here to help! I can give you info on our services, pricing, or get you a free quote. What do you need?","Hi! Ask me about lawn care, landscaping, hardscaping, or anything else. I can also help you request a free quote right now!"]
+};
+function sendMsg(){
+  var inp=document.getElementById('chatIn'),val=inp.value.trim();
+  if(!val)return;
+  var msgs=document.getElementById('chatMsgs');
+  msgs.innerHTML+='<div class="msg user">'+val+'</div>';
+  inp.value='';
+  var key='default',low=val.toLowerCase();
+  if(low.includes('quote')||low.includes('estimat')||low.includes('schedul'))key='quote';
+  else if(low.includes('price')||low.includes('cost')||low.includes('much'))key='price';
+  else if(low.includes('mow')||low.includes('lawn')||low.includes('grass')||low.includes('cut'))key='mow';
+  var arr=replies[key],r=arr[Math.floor(Math.random()*arr.length)];
+  setTimeout(function(){msgs.innerHTML+='<div class="msg bot">'+r+'</div>';msgs.scrollTop=msgs.scrollHeight;},700);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+</script>
+</body>
+</html>
